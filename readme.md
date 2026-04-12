@@ -20,34 +20,30 @@ PAYOO is a smart Mobile Financial Services (MFS) interface that provides a seaml
 <table>
     <tr>
         <td>
-        <img src="./ui/Login page.png" >
+        <img src="./ui/Login page.png" hight="400px" width="300px">
         </td>
         <td >
-        <img src="./assets/Logo-full.png" width="100%" style="background:white;padding:10px;">
+        <img src="./assets/Logo-full.png" width="100%" style="background:white;padding:10px;" >
+        </td>
+             <td>
+        <img src="./ui/Cashout.png" hight="400px" width="300px">
+        </td>
+        <td >
+        <img src="./ui/Add Money.png" hight="400px" width="300px" >
         </td>
     </tr>
     <tr>
-        <td>
-        <img src="./ui/Cashout.png" >
+          <td>
+        <img src="./ui/Transactions.png" hight="400px" width="300px" >
         </td>
         <td >
-        <img src="./ui/Add Money.png" >
+        <img src="./ui/Pay Bill.png" hight="400px" width="300px">
         </td>
-    </tr>
-    <tr>
         <td>
-        <img src="./ui/Transactions.png" >
+        <img src="./ui/send money.png" hight="400px" width="300px">
         </td>
         <td >
-        <img src="./ui/Pay Bill.png" >
-        </td>
-    </tr>
-    <tr>
-        <td>
-        <img src="./ui/send money.png" >
-        </td>
-        <td >
-        <img src="./ui/Home Page.png">
+        <img src="./ui/Home Page.png" hight="400px" width="300px">
         </td>
     </tr>
     
@@ -55,24 +51,9 @@ PAYOO is a smart Mobile Financial Services (MFS) interface that provides a seaml
 
 ## How to use
 
-### 1. Clone the Repository
+### Clone the Repository
 
 ```bash
 git clone https://github.com/sabbirvuia/Payoo-MFS.git
 ```
-
-### 2. Install Dependencies
-
-Copy the project assets and set up required CDNs:
-
-- **Tailwind CSS** - Add to `<head>`:
-
-
-- **DaisyUI** - Add after Tailwind:
-
-
-- **Font Awesome** - Add Font Awesome icons:
-
-
-### 3. Start Building the Application
 
