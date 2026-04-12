@@ -58,7 +58,7 @@ PAYOO is a smart Mobile Financial Services (MFS) interface that provides a seaml
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/ProgrammingHero1/payoo-resources.git
+git clone https://github.com/sabbirvuia/Payoo-MFS.git
 ```
 
 ### 2. Install Dependencies
