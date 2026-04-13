@@ -58,27 +58,27 @@
 
 
         <div class="buttons grid grid-cols-3 gap-4 ">
-            <button onclick="showOnly('add-money')" class="btn btn-primary flex-col h-full py-4 rounded-2xl bg-base-200">
+            <button onclick="showOnly('add-money', 'add-money-btn')" id="add-money-btn" class="btn btn-primary  flex-col h-full py-4 rounded-2xl bg-base-200">
                 <img src="./assets/opt-1.png" alt="">
                 <p class="text-black/80 font-normal">Add Money</p>
             </button>
-            <button onclick="showOnly('cash-out')" class="btn btn-primary flex-col h-full py-6 rounded-2xl bg-base-100">
+            <button onclick="showOnly('cash-out', 'cash-out-btn')" id="cash-out-btn" class="btn btn-primary flex-col h-full py-6 rounded-2xl bg-base-100">
                 <img src="./assets/opt-2.png" alt="">
                 <p class="text-black/80 font-normal">Cashout</p>
             </button>
-            <button onclick="showOnly('transfer-money')" class="btn btn-primary flex-col h-full py-6 rounded-2xl bg-base-100">
+            <button onclick="showOnly('transfer-money', 'transfer-money-btn')" id="transfer-money-btn" class="btn btn-primary flex-col h-full py-6 rounded-2xl bg-base-100">
                 <img src="./assets/opt-3.png" alt="">
                 <p class="text-black/80 font-normal text-nowrap">Transfer Money</p>
             </button>
-            <button onclick="showOnly('get-bonus')" class="btn btn-primary flex-col h-full py-6 rounded-2xl bg-base-100">
+            <button onclick="showOnly('get-bonus', 'get-bonus-btn')" id="get-bonus-btn" class="btn btn-primary flex-col h-full py-6 rounded-2xl bg-base-100">
                 <img src="./assets/opt-4.png" alt="">
                 <p class="text-black/80 font-normal">Get Bonus</p>
             </button>
-            <button onclick="showOnly('pay-bill')" class="btn btn-primary flex-col h-full py-6 rounded-2xl bg-base-100">
+            <button onclick="showOnly('pay-bill', 'pay-bill-btn')" id="pay-bill-btn" class="btn btn-primary flex-col h-full py-6 rounded-2xl bg-base-100">
                 <img src="./assets/opt-5.png" alt="">
                 <p class="text-black/80 font-normal">Pay Bill</p>
             </button>
-            <button onclick="showOnly('transaction-history')" class="btn btn-primary flex-col h-full py-6 rounded-2xl bg-base-100">
+            <button onclick="showOnly('transaction-history', 'transaction-history-btn')" id="transaction-history-btn" class="btn btn-primary flex-col h-full py-6 rounded-2xl bg-base-100">
                 <img src="./assets/opt-6.png" alt="">
                 <p class="text-black/80 font-normal">Transactions</p>
             </button>
@@ -226,6 +226,6 @@
 
      <script src="./scripts/home.js"></script>
      <script src="./scripts/machin.js"></script>
-
+      <script src="./scripts/add-money.js"></script>
 </body>
 </html>
