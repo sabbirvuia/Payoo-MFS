@@ -17,7 +17,9 @@ document.getElementById("withdraw-btn")
     }
     else if (pinValue === "1122") {
      if (cashOutAmout > mainBalance){
-        alert("❌ Insufficient Balance")}
+        alert("❌ Insufficient Balance") 
+        return
+      }
         let newBalance = Number(mainBalance) - Number(cashOutAmout);
 
       document.getElementById("balance-show").innerText = `${newBalance}`;

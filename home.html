@@ -38,6 +38,10 @@
         .textscroll {
             animation: textscroll 10s linear infinite;
         }
+
+        html {
+            scroll-behavior: smooth;
+        }
     </style>
 </head>
 
@@ -76,47 +80,50 @@
         <p class="text-neutral/50 ">Enjoy easy and convenient financial service with us. Cashout charge is low and</p>
         <div class="w-full overflow-hidden py-2">
             <div class="whitespace-nowrap textscroll">
-                🚀 Add Money & CashOut is live • 🔥 More features coming soon • 💡 Stay tuned with Pay<span class="text-primary">oo</span> •
+                🚀 Add Money & CashOut is live • 🔥 More features coming soon • 💡 Stay tuned with Pay<span
+                    class="text-primary">oo</span> •
             </div>
         </div>
 
         <div class="buttons grid grid-cols-3 gap-4 ">
-            <button onclick="showOnly('add-money', 'add-money-btn')" id="add-money-btn"
+            <a href="#add-money" onclick="showOnly('add-money', 'add-money-btn')" id="add-money-btn"
                 class="btn btn-primary  flex-col h-full py-4 rounded-2xl bg-base-200">
                 <img src="./assets/opt-1.png" alt="">
                 <p class="text-black/80 font-normal">Add Money</p>
-            </button>
-            <button onclick="showOnly('cash-out', 'cash-out-btn')" id="cash-out-btn"
+            </a>
+            <a href="#cash-out" onclick="showOnly('cash-out', 'cash-out-btn')" id="cash-out-btn"
                 class="btn btn-primary flex-col h-full py-6 rounded-2xl bg-base-100">
                 <img src="./assets/opt-2.png" alt="">
                 <p class="text-black/80 font-normal">Cash Out</p>
-            </button>
-            <button onclick="showOnly('transfer-money', 'transfer-money-btn')" id="transfer-money-btn"
+            </a>
+            <a href="#transfer-money" onclick="showOnly('transfer-money', 'transfer-money-btn')" id="transfer-money-btn"
                 class="btn btn-primary flex-col h-full py-6 rounded-2xl bg-base-100">
                 <img src="./assets/opt-3.png" alt="">
                 <p class="text-black/80 font-normal text-nowrap">Transfer Money</p>
-            </button>
-            <button onclick="showOnly('get-bonus', 'get-bonus-btn')" id="get-bonus-btn"
+            </a>
+            <a href="#get-bonus" onclick="showOnly('get-bonus', 'get-bonus-btn')" id="get-bonus-btn"
                 class="btn btn-primary flex-col h-full py-6 rounded-2xl bg-base-100">
                 <img src="./assets/opt-4.png" alt="">
                 <p class="text-black/80 font-normal">Get Bonus</p>
-            </button>
-            <button onclick="showOnly('pay-bill', 'pay-bill-btn')" id="pay-bill-btn"
+            </a>
+            <a href="#pay-bill" onclick="showOnly('pay-bill', 'pay-bill-btn')" id="pay-bill-btn"
                 class="btn btn-primary flex-col h-full py-6 rounded-2xl bg-base-100">
                 <img src="./assets/opt-5.png" alt="">
                 <p class="text-black/80 font-normal">Pay Bill</p>
-            </button>
-            <button onclick="showOnly('transaction-history', 'transaction-history-btn')" id="transaction-history-btn"
-                class="btn btn-primary flex-col h-full py-6 rounded-2xl bg-base-100">
+            </a>
+            <a href="#transaction-history" onclick="showOnly('transaction-history', 'transaction-history-btn')"
+                id="transaction-history-btn" class="btn btn-primary flex-col h-full py-6 rounded-2xl bg-base-100">
                 <img src="./assets/opt-6.png" alt="">
                 <p class="text-black/80 font-normal">Transactions</p>
-            </button>
+            </a>
         </div>
     </section>
 
     <section id="transaction-history" class="p-5">
-        <h2 class="text-xl font-bold">Transaction History</h2>
-
+        <div class="flex justify-between items-center sticky bg-base-200 z-5 top-20">
+            <h2 class="text-xl font-bold">Transaction History</h2>
+            <button class="btn rounded-full" onclick="topFunction()"><i class="fa-solid fa-angles-up"></i></button>
+        </div>
         <div id="history" class="flex flex-col gap-4 bg-base-200 w-full mt-7 ">
             <!-- <div  class="rounded-xl p-4 flex gap-3 items-center shadow-md bg-base-100">
                 <div class="bg-slate-200 rounded-full p-2">
@@ -140,9 +147,14 @@
 
 
     <section id="add-money" class="hidden p-5">
-        <h2 class="text-xl font-bold">Add Money <span class="inline-flex items-center rounded-md bg-red-600 px-2 py-1 text-xs font-medium text-white">
-  LIVE
-</span></h2>
+        <div class="flex justify-between items-center">
+
+            <h2 class="text-xl font-bold">Add Money <span
+                    class="inline-flex items-center rounded-md bg-red-600 px-2 py-1 text-xs font-medium text-white">
+                    LIVE
+                </span></h2>
+            <button class="btn rounded-full" onclick="topFunction()"><i class="fa-solid fa-angles-up"></i></button>
+        </div>
         <div class="card bg-base-100 w-full rounded-[20px]  shadow-md mt-6 mx-auto">
             <div class="card-body rounded-full">
                 <fieldset class="fieldset">
@@ -172,10 +184,10 @@
                     <label class="label text-base font-medium">Amount to Add</label>
                     <input type="number"
                         class="add-money-amount input w-full rounded-full bg-base-200 outline-none border-white"
-                        placeholder="Add Amount to withdraw" >
-          <br>
-          <label class=" label text-base font-medium">Pin Number <span class="text-sky-300"><small>(Pin:
-                            1122)</small></span></label>
+                        placeholder="Add Amount to withdraw">
+                    <br>
+                    <label class=" label text-base font-medium">Pin Number <span class="text-sky-300"><small>(Pin:
+                                1122)</small></span></label>
                     <input minlength="4" maxlength="4" type="password"
                         class="input-pin input rounded-full bg-base-200 outline-none border-white w-full"
                         placeholder="Enter 4 digit pin number" />
@@ -186,9 +198,13 @@
     </section>
 
     <section id="cash-out" class="hidden p-5">
-        <h2 class="text-xl font-bold">Cash Out <span class="inline-flex items-center rounded-md bg-red-600 px-2 py-1 text-xs font-medium text-white">
-  LIVE
-</span></h2>
+        <div class="flex justify-between items-center">
+            <h2 class="text-xl font-bold">Cash Out <span
+                    class="inline-flex items-center rounded-md bg-red-600 px-2 py-1 text-xs font-medium text-white">
+                    LIVE
+                </span></h2>
+            <button class="btn rounded-full" onclick="topFunction()"><i class="fa-solid fa-angles-up"></i></button>
+        </div>
         <div class="card bg-base-100 w-full rounded-[20px]  shadow-md mt-6 mx-auto">
             <div class="card-body rounded-full">
                 <fieldset class="fieldset">
@@ -198,7 +214,6 @@
                     <br>
                     <label class="label text-base font-medium">Amount</label>
                     <input type="number"
-                        
                         class="cash-out-amout input w-full rounded-full bg-base-200 outline-none border-white"
                         placeholder="Enter amount to withdraw" />
                     <br>
@@ -206,14 +221,19 @@
                     <input minlength="4" maxlength="4" type="password"
                         class="input-pin-co input rounded-full bg-base-200 outline-none border-white w-full"
                         placeholder="Enter 4 digit pin number" />
-                    <button id="withdraw-btn" class="btn btn-neutral mt-4 rounded-full bg-primary w-full text-lg">Withdraw
+                    <button id="withdraw-btn"
+                        class="btn btn-neutral mt-4 rounded-full bg-primary w-full text-lg">Withdraw
                         Money</button>
                 </fieldset>
             </div>
     </section>
 
     <section id="transfer-money" class="hidden p-5">
-        <h2 class="text-xl font-bold">Transfer Money <div class="badge badge-warning">Comming</div></h2>
+        <div class="flex justify-between items-center">
+            <h2 class="text-xl font-bold">Transfer Money <div class="badge badge-warning">Comming</div>
+            </h2>
+            <button class="btn rounded-full" onclick="topFunction()"><i class="fa-solid fa-angles-up"></i></button>
+        </div>
         <div class="card bg-base-100 w-full rounded-[20px]  shadow-md mt-6 mx-auto">
             <div class="card-body rounded-full">
                 <fieldset class="fieldset">
@@ -237,15 +257,19 @@
     </section>
 
     <section id="get-bonus" class="hidden p-5">
-        <h2 class="text-xl font-bold">Get Bonus <span class="inline-flex items-center rounded-md bg-red-600 px-2 py-1 text-xs font-medium text-white">
-  LIVE
-</span></h2>
-        
+        <div class="flex justify-between items-center">
+            <h2 class="text-xl font-bold">Get Bonus <span
+                    class="inline-flex items-center rounded-md bg-red-600 px-2 py-1 text-xs font-medium text-white">
+                    LIVE
+                </span></h2>
+            <button class="btn rounded-full" onclick="topFunction()"><i class="fa-solid fa-angles-up"></i></button>
+        </div>
         <div class="card bg-base-100 w-full rounded-[20px]  shadow-md mt-6 mx-auto">
             <div class="card-body rounded-full">
                 <fieldset class="fieldset">
                     <label class="label text-base font-medium">Enter Bonus Coupon</label>
-                    <label class="label text-sky-400 font-bold"><small>[SABBIR20]--[SAVE20]--[PAYOO20]--[BONUS20]</small></label>
+                    <label
+                        class="label text-sky-400 font-bold"><small>[SABBIR20]--[SAVE20]--[PAYOO20]--[BONUS20]</small></label>
                     <input id="input-coupon" maxlength="12" placeholder="Enter your coupon" type="text"
                         class="w-full input rounded-full bg-base-200 outline-none border-white" />
                     <button id="redeem-btn"
@@ -257,7 +281,10 @@
 
 
     <section id="pay-bill" class="hidden p-5">
-        <h2 class="text-xl font-bold">Pay Bill</h2>
+        <div class="flex justify-between items-center">
+            <h2 class="text-xl font-bold">Pay Bill</h2>
+            <button class="btn rounded-full" onclick="topFunction()"><i class="fa-solid fa-angles-up"></i></button>
+        </div>
         <div class="card bg-base-100 w-full rounded-[20px]  shadow-md mt-6 mx-auto">
             <div class="card-body rounded-full">
                 <fieldset class="fieldset">
@@ -299,4 +326,5 @@
     <script src="./scripts/cash-out.js"></script>
     <script src="./scripts/get-bonus.js"></script>
 </body>
+
 </html>
