@@ -21,7 +21,7 @@ document
     } else if (bankAcNumberValue === "") {
       alert("⚠️ Add Bank Account Number");
     } else if (addMoneyValue === "") {
-      alert(⚠️"add Amount ");
+      alert("⚠️ add Amount ");
     } else if (pinValue === "1122") {
       
   
