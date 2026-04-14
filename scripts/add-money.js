@@ -6,30 +6,31 @@ document
   .addEventListener("click", function () {
     const bankSelectValue = document.querySelector(".bank-select").value;
 
-    const mainBalance = document.getElementById("balance-show").innerText;
+    let mainBalance = document.getElementById("balance-show").innerText;
 
     const bankAcNumberValue = document.querySelector(".bank-ac-number").value;
 
-    let addMoneyValue = document.querySelector(".add-money").value;
+    let addMoneyValue = document.querySelector(".add-money-amount").value;
     let pinValue = document.querySelector(".input-pin").value;
 
     const date = new Date();
     const trxId = generateTrxId();
 
     if (bankSelectValue === "Select Bank") {
-      alert("Select A Bank Please");
+      alert("⚠️ Select A Bank Please");
     } else if (bankAcNumberValue === "") {
-      alert("Add Bank Account Number");
+      alert("⚠️ Add Bank Account Number");
     } else if (addMoneyValue === "") {
-      alert("add Amount ");
+      alert(⚠️"add Amount ");
     } else if (pinValue === "1122") {
-      pinValue = "";
-      addMoneyValue = "";
-      const newBalance = Number(mainBalance) + Number(addMoneyValue);
+      
+  
 
-      document.getElementById("balance-show").innerHTML = `${newBalance}`;
+      let newBalance = Number(mainBalance) + Number(addMoneyValue);
 
-      alert(`Transaction Successful
+      document.getElementById("balance-show").innerText = `${newBalance}`;
+
+      alert(`✅ Transaction Successful
 TRX ID: ${trxId}
 Amount Added: $${addMoneyValue}
 From A/C: ${bankAcNumberValue}
@@ -54,8 +55,12 @@ Thank you for banking with us.
                 </div>
                 `;
       historyContent.appendChild(div);
+
+      document.querySelector(".add-money-amount").value ="";
+      document.querySelector(".input-pin").value ="";
+
     } else {
-      alert("Pin Wrong!");
+      alert("❌ Pin Wrong!");
     }
   });
 

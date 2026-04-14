@@ -76,7 +76,7 @@
         <p class="text-neutral/50 ">Enjoy easy and convenient financial service with us. Cashout charge is low and</p>
         <div class="w-full overflow-hidden py-2">
             <div class="whitespace-nowrap textscroll">
-                🚀 Add Money is live • 🔥 More features coming soon • 💡 Stay tuned with Pay<span class="text-primary">oo</span> •
+                🚀 Add Money & CashOut is live • 🔥 More features coming soon • 💡 Stay tuned with Pay<span class="text-primary">oo</span> •
             </div>
         </div>
 
@@ -89,7 +89,7 @@
             <button onclick="showOnly('cash-out', 'cash-out-btn')" id="cash-out-btn"
                 class="btn btn-primary flex-col h-full py-6 rounded-2xl bg-base-100">
                 <img src="./assets/opt-2.png" alt="">
-                <p class="text-black/80 font-normal">Cashout</p>
+                <p class="text-black/80 font-normal">Cash Out</p>
             </button>
             <button onclick="showOnly('transfer-money', 'transfer-money-btn')" id="transfer-money-btn"
                 class="btn btn-primary flex-col h-full py-6 rounded-2xl bg-base-100">
@@ -171,8 +171,8 @@
                     <br>
                     <label class="label text-base font-medium">Amount to Add</label>
                     <input type="number"
-                        class="add-money input w-full rounded-full bg-base-200 outline-none border-white"
-                        placeholder="Add Amount to withdraw" "/>
+                        class="add-money-amount input w-full rounded-full bg-base-200 outline-none border-white"
+                        placeholder="Add Amount to withdraw" >
           <br>
           <label class=" label text-base font-medium">Pin Number <span class="text-sky-300"><small>(Pin:
                             1122)</small></span></label>
@@ -186,7 +186,9 @@
     </section>
 
     <section id="cash-out" class="hidden p-5">
-        <h2 class="text-xl font-bold">Cash Out <div class="badge badge-warning">Comming</div></h2>
+        <h2 class="text-xl font-bold">Cash Out <span class="inline-flex items-center rounded-md bg-red-600 px-2 py-1 text-xs font-medium text-white">
+  LIVE
+</span></h2>
         <div class="card bg-base-100 w-full rounded-[20px]  shadow-md mt-6 mx-auto">
             <div class="card-body rounded-full">
                 <fieldset class="fieldset">
@@ -196,21 +198,22 @@
                     <br>
                     <label class="label text-base font-medium">Amount</label>
                     <input type="number"
-                        class="add-money input w-full rounded-full bg-base-200 outline-none border-white"
+                        
+                        class="cash-out-amout input w-full rounded-full bg-base-200 outline-none border-white"
                         placeholder="Enter amount to withdraw" />
                     <br>
                     <label class="label text-base font-medium">Pin Number</label>
                     <input minlength="4" maxlength="4" type="password"
-                        class="input-pin input rounded-full bg-base-200 outline-none border-white w-full"
+                        class="input-pin-co input rounded-full bg-base-200 outline-none border-white w-full"
                         placeholder="Enter 4 digit pin number" />
-                    <button id="login-btn" class="btn btn-neutral mt-4 rounded-full bg-primary w-full text-lg">Withdraw
+                    <button id="withdraw-btn" class="btn btn-neutral mt-4 rounded-full bg-primary w-full text-lg">Withdraw
                         Money</button>
                 </fieldset>
             </div>
     </section>
 
     <section id="transfer-money" class="hidden p-5">
-        <h2 class="text-xl font-bold">Transfer Money</h2>
+        <h2 class="text-xl font-bold">Transfer Money <div class="badge badge-warning">Comming</div></h2>
         <div class="card bg-base-100 w-full rounded-[20px]  shadow-md mt-6 mx-auto">
             <div class="card-body rounded-full">
                 <fieldset class="fieldset">
@@ -235,13 +238,15 @@
 
     <section id="get-bonus" class="hidden p-5">
         <h2 class="text-xl font-bold">Get Bonus</h2>
+        
         <div class="card bg-base-100 w-full rounded-[20px]  shadow-md mt-6 mx-auto">
             <div class="card-body rounded-full">
                 <fieldset class="fieldset">
                     <label class="label text-base font-medium">Enter Bonus Coupon</label>
-                    <input id="input-number" maxlength="6" minlength="6" placeholder="Enter your coupon" type="text"
+                    <label class="label text-sky-400 font-bold"><small>[SABBIR20]--[SAVE20]--[PAYOO20]--[BONUS20]</small></label>
+                    <input id="input-coupon" maxlength="12" placeholder="Enter your coupon" type="text"
                         class="w-full input rounded-full bg-base-200 outline-none border-white" />
-                    <button id="login-btn"
+                    <button id="redeem-btn"
                         class="btn btn-neutral mt-4 rounded-full bg-primary w-full text-lg">Redeem</button>
                 </fieldset>
             </div>
@@ -289,6 +294,7 @@
     <script src="./scripts/machin.js"></script>
     <script src="./scripts/add-money.js"></script>
     <script src="./tailwind.config.js"></script>
+    <script src="./scripts/cash-out.js"></script>
+    <script src="./scripts/get-bonus.js"></script>
 </body>
-
 </html>
