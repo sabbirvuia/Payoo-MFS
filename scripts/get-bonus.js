@@ -1,8 +1,8 @@
 let coupons = {
   SABBIR20: false,
   SAVE20: false,
-  PAYOO50: false,
-  BONUS10: false
+  PAYOO20: false,
+  BONUS20: false
 };
 
 document.getElementById("redeem-btn")
